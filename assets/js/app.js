@@ -2,15 +2,9 @@ const btn=document.querySelector('#theme-toggle, .theme-toggle, [data-theme-togg
 
 /* UI interactions: burger menu and smooth scroll */
 document.addEventListener('DOMContentLoaded', function(){
-  const burger = document.querySelector('.burger');
   const mobileNav = document.querySelector('.mobile-nav');
   const navLinks = document.querySelectorAll('a[href^="#"]');
 
-  if(burger){
-    burger.addEventListener('click', function(){
-      mobileNav.classList.toggle('active');
-    });
-  }
   navLinks.forEach(a=>{
     a.addEventListener('click', function(e){
       // smooth scroll to anchors
@@ -25,13 +19,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 });
-
-
-// Burger menu
-document.addEventListener('DOMContentLoaded',()=>{
-  const b=document.querySelector('.burger');
-  const nav=document.querySelector('.nav');
-  if(b){ b.onclick=()=>nav.classList.toggle('open'); }
 
   // fade in all sections
   document.querySelectorAll('section, .card').forEach(el=>el.classList.add('fade-in'));
@@ -82,6 +69,6 @@ document.addEventListener('DOMContentLoaded',()=>{
       }
     };
     if (mq.addEventListener) mq.addEventListener('change', onChange);
-    else if (mq.addListener) mq.addListener(onChange);
+    else if (mq.addListener) mq.addListener(onChange); 
   }
 })();
