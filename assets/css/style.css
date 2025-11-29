@@ -1,0 +1,325 @@
+
+/* Modern minimalist redesign - mobile first */
+:root{
+  --bg: #ffffff;
+  --card: #f7f7f8;
+  --muted: #6b7280;
+  --accent: #111111;
+  --accent-2: #2b2b2b;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(17,17,17,0.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--accent-2);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Container */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:18px;
+}
+
+/* Header */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:12px 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:inherit;
+}
+.brand .logo{
+  width:150px;  
+  height:auto;
+}
+.brand h1{
+  font-size:18px;
+  margin:0;
+  font-weight:600;
+  letter-spacing:0.2px;
+}
+.brand p{margin:0;font-size:12px;color:var(--muted)}
+
+/* Nav */
+.nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+.nav a{
+  color:var(--accent-2);
+  text-decoration:none;
+  font-size:15px;
+  padding:8px 10px;
+  border-radius:8px;
+}
+.nav a:hover{background:var(--card)}
+
+/* CTA */
+.cta{
+  background:var(--accent-2);
+  color:white;
+  border:0;
+  padding:12px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* Burger for mobile */
+.burger{
+  display:none;
+  font-size:24px;
+  background:transparent;
+  border:0;
+  cursor:pointer;
+}
+.mobile-nav{
+  display:none;
+}
+
+/* Hero */
+.hero{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  padding:30px 0 18px 0;
+  align-items:flex-start;
+}
+h2.hero-title{
+  font-size:28px;
+  margin:0;
+  line-height:1.06;
+}
+p.lead{margin:0;color:var(--muted);max-width:680px}
+
+/* Cards grid */
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  margin-top:22px;
+}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+/* Services list */
+.services{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+.service-item h3{margin:0;font-size:16px}
+.service-item p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+/* Contact form */
+form.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+input[type="text"], input[type="email"], textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid #e6e7eb;
+  background:white;
+  font-size:14px;
+  color:var(--accent-2);
+}
+textarea{min-height:120px;resize:vertical}
+.btn-primary{
+  background:var(--accent-2);
+  color:white;
+  border:0;
+  padding:12px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* Footer */
+.footer{
+  margin-top:30px;
+  padding:24px 0;
+  color:var(--muted);
+  font-size:14px;
+  text-align:center;
+}
+
+/* Utility */
+.row{display:flex;gap:18px;align-items:center}
+.col{flex:1}
+
+/* Responsive 768+ */
+@media(min-width:768px){
+  .hero{flex-direction:row;align-items:center;justify-content:space-between}
+  h2.hero-title{font-size:36px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .mobile-nav{display:none}
+}
+
+/* Mobile specific */
+@media(max-width:767px){
+  .nav{display:none}
+  .burger{display:block}
+  .mobile-nav{
+    display:block;
+    position:fixed;
+    top:66px;
+    right:12px;
+    background:linear-gradient(180deg,white, white);
+    border-radius:12px;
+    padding:12px;
+    box-shadow:0 8px 24px rgba(16,24,40,0.08);
+    display:none;
+    flex-direction:column;
+    gap:10px;
+    z-index:999;
+  }
+  .mobile-nav.active{display:flex}
+  .brand .logo{width:56px}
+}
+
+
+html[data-theme='dark'] body { background:#000; color:#fff; }
+
+/* Dark theme full redesign */
+html[data-theme='dark'] body { background:#000; color:#fff; }
+
+/* Swap logos */
+.logo-dark { display:none; }
+html[data-theme='dark'] .logo-light { display:none; }
+html[data-theme='dark'] .logo-dark { display:block; }
+
+/* Styled toggle */
+.theme-toggle{
+  margin-left:auto;
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid #444;
+  background:#111;
+  color:#fff;
+  cursor:pointer;
+}
+html[data-theme='light'] .icon-moon{ display:none; }
+html[data-theme='dark'] .icon-sun{ display:none; }
+
+
+/* Dark theme blocks */
+html[data-theme='dark'] .card{
+  background:#111;
+  color:#fff;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+  border:1px solid #333;
+}
+html[data-theme='dark'] .grid .card p,
+html[data-theme='dark'] p,
+html[data-theme='dark'] h1,
+html[data-theme='dark'] h2,
+html[data-theme='dark'] h3{
+  color:#fff;
+}
+html[data-theme='dark'] section{
+  background:#000;
+}
+
+
+/* Hover effects */
+.card:hover{
+  transform:translateY(-4px);
+  transition:all .25s ease;
+}
+html[data-theme='dark'] .card:hover{
+  background:#181818;
+  border-color:#444;
+}
+
+/* Dark gradients */
+html[data-theme='dark'] .section, 
+html[data-theme='dark'] section{
+  background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+}
+
+/* Premium typography */
+body{
+  letter-spacing:0.2px;
+  line-height:1.55;
+}
+html[data-theme='dark'] h1,
+html[data-theme='dark'] h2,
+html[data-theme='dark'] h3{
+  font-weight:600;
+  letter-spacing:0.3px;
+}
+
+/* Slight card glow on hover (premium effect) */
+html[data-theme='dark'] .card:hover{
+  box-shadow:0 0 22px rgba(255,255,255,0.05);
+}
+
+
+/* Smooth appearance */
+.fade-in{
+  opacity:0;
+  transform:translateY(12px);
+  animation:fadeIn .6s ease forwards;
+}
+@keyframes fadeIn{
+  to{opacity:1;transform:none;}
+}
+
+/* Parallax header */
+header{
+  background-attachment:fixed;
+  background-size:cover;
+  background-position:center;
+}
+
+/* Burger menu */
+.burger{
+  display:none;
+  cursor:pointer;
+  font-size:26px;
+}
+.nav{
+  display:flex;
+  gap:16px;
+}
+@media(max-width:768px){
+  .burger{display:block;}
+  .nav{display:none;flex-direction:column;}
+  .nav.open{display:flex;}
+}
+
+/* Light theme premium */
+html:not([data-theme='dark']) body{
+  background:#fdfdfd;
+  color:#111;
+}
+html:not([data-theme='dark']) .card{
+  background:#fff;
+  border:1px solid #e5e5e5;
+  box-shadow:0 4px 18px rgba(0,0,0,0.05);
+}
