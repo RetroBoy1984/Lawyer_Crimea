@@ -66,7 +66,7 @@
           <p>Подготовка документов, защита интересов в судебных инстанциях.</p>
         </div>
       </div>
-    </section>
+    </section> 
 
     <section id="prices" style="margin-top:28px">
       <h3>Цены (ориентировочно)</h3>
@@ -110,19 +110,8 @@
     </footer>
   </main>
 
-  <script src="assets/js/app.js"></script>
+  
 
-<script>
-(function(){
-  const html=document.documentElement;
-  const btn=document.getElementById('themeToggle');
-  const key='site-theme';
-  function apply(t){ t==='dark'?html.setAttribute('data-theme','dark'):html.removeAttribute('data-theme'); }
-  const saved=localStorage.getItem(key);
-  apply(saved|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
-  btn.onclick=()=>{ const d=html.getAttribute('data-theme')==='dark'; const next=d?'light':'dark'; apply(next); localStorage.setItem(key,next);};
-})();
-</script>
-
+    <script src="assets/js/theme.js"></script>
 </body>
-</html>
+</html> 
