@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Юрист Регушевский</title>  
+  <meta name="description" content="Тёмный минималистичный сайт юриста" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top">Юрист · Святослав Регушевский</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links desktop-nav">
+        <a href="#services">Услуги</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#prices">Цены</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-menu__links">
+        <a href="#services">Услуги</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-badge">Юрист · Правовое сопровождение</div> 
+      <h1>Квалифицированная Юридическая помощь<br><span>во всех сферах права</span></h1>
+      <p>Чёткая стратегия. Спокойный процесс. Предсказуемый результат для частных клиентов и бизнеса.</p>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Связаться</a>
+        <a class="btn-secondary" href="#services">Смотреть услуги</a>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <div class="section-badge">Услуги</div>
+        <h2>Когда нужна надёжная юридическая опора.</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Консультации</h3>
+          <p>Разбор ситуации, оценка рисков и понятный план дальнейших действий.</p>
+        </article>
+        <article class="card">
+          <h3>Представительство <br>в судах</h3>
+          <p>Подготовка позиции, документов и сопровождение дела на всех этапах.</p>
+        </article>
+        <article class="card">
+          <h3>Сопровождение сделок и договоров</h3>
+          <p>Подготовка, проверка и корректировка документов под вашу задачу.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="advantages" class="section">
+      <div class="section-head">
+        <div class="section-badge">Преимущества</div>
+        <h2>Многолетний опыт. Индивидуальный подход к каждому делу.</h2>
+      </div>
+
+      <div class="cards cards--small">
+        <article class="card">
+          <h3>Понятно</h3>
+          <p>Без перегруза терминами и лишней сложности — только суть.</p>
+        </article>
+        <article class="card">
+          <h3>Собранно</h3>
+          <p>Каждое дело ведётся как проект: с логикой, структурой и контролем деталей.</p>
+        </article>
+        <article class="card">
+          <h3>Надёжно</h3>
+          <p>Позиция строится с запасом по рискам и понятным прогнозом.</p> 
+        </article>
+      </div>
+    </section>
+
+    <section id="prices" class="section">
+      <div class="section-head">
+        <div class="section-badge">Цены</div>
+        <h2>Доступная стоимость услуг. Индивидуальный подход к каждому клиенту.</h2>
+      </div>
+
+      <div class="cards cards--small">
+        <article class="card">
+          <h3>Консультация</h3>
+          <p>Первичная консультация — 2 000 ₽ <br> (без ограничения по времени)</p>
+        </article>
+        <article class="card">
+          <h3>Представительство <br>в судах</h3> 
+          <p>От 10 000 ₽ за одно заседание.</p>
+        </article>
+        <article class="card">
+          <h3>Абонентское юридическое обслуживание</h3>
+          <p>От 40 000 ₽ в месяц.</p> 
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-shell">
+        <div class="section-badge">Контакты</div>
+        <h2>Обсудим вашу задачу и найдём верное решение.</h2>
+        <p>Свяжитесь со мной любым удобным способом.</p>
+
+        <div class="contact-list">
+          <a href="tel:+79780534653">+7 (978) 053-46-53</a>
+          <a href="mailto:lawyer.s.regushevsky@inbox.ru">lawyer.s.regushevsky@inbox.ru</a>
+        </div>
+
+        <div class="hero-actions contact-actions">
+          <a class="btn-primary" href="https://t.me/citizen_10001">Telegram</a> 
+          <a class="btn-secondary" href="https://max.ru/u/f9LHodD0cOLxMk6S6gnav4ER8u8rqaU4NIiZdwi20c5r7usSrzHY11e67fw">Max</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
